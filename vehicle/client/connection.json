@@ -1,0 +1,103 @@
+{
+    "name": "basic-network",
+    "version": "1.0.0",
+    "client": {
+        "organization": "Manufacturer",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                },
+                "orderer": "300"
+            }
+        }
+    },
+    "channels": {
+        "mychannel": {
+            "orderers": [
+                "orderer.example.com"
+            ],
+            "peers": {
+                "peer0.Manufacturer.example.com": {},
+                "peer0.Dealer.example.com": {},
+                "peer0.Insurance.example.com": {},
+                "peer0.Gdt.example.com": {}
+            }
+        }
+    },
+    "organizations": {
+        "Manufacturer": {
+            "mspid": "ManufacturerMSP",
+            "peers": [
+                "peer0.Manufacturer.example.com"
+            ],
+            "certificateAuthorities": [
+                "ca1.example.com"
+            ]
+        },
+        "Dealer": {
+            "mspid": "DealerMSP",
+            "peers": [
+                "peer0.Dealer.example.com"
+            ],
+            "certificateAuthorities": [
+                "ca2.example.com"
+            ]
+        },
+        "Insurance": {
+            "mspid": "InsuranceMSP",
+            "peers": [
+                "peer0.Insurance.example.com"
+            ],
+            "certificateAuthorities": [
+                "ca3.example.com"
+            ]
+        },
+        "Gdt": {
+            "mspid": "GdtMSP",
+            "peers": [
+                "peer0.Gdt.example.com"
+            ],
+            "certificateAuthorities": [
+                "ca4.example.com"
+            ]
+        }
+    },
+    "orderers": {
+        "orderer.example.com": {
+            "url": "grpc://localhost:7050"
+        }
+    },
+    "peers": {
+        "peer0.Manufacturer.example.com": {
+            "url": "grpc://localhost:7051"
+        },
+        "peer0.Dealer.example.com": {
+            "url": "grpc://localhost:7051"
+        },
+        "peer0.Insurance.example.com": {
+            "url": "grpc://localhost:7051"
+        },
+        "peer0.Gdt.example.com": {
+            "url": "grpc://localhost:7051"
+        }
+    },
+    "certificateAuthorities": {
+        "ca1.example.com": {
+            "url": "http://localhost:7054",
+            "caName": "ca1.example.com"
+        },
+        "ca2.example.com": {
+            "url": "http://localhost:7054",
+            "caName": "ca2.example.com"
+        },
+        "ca3.example.com": {
+            "url": "http://localhost:7054",
+            "caName": "ca3.example.com"
+        },
+        "ca4.example.com": {
+            "url": "http://localhost:7054",
+            "caName": "ca4.example.com"
+        }
+    }
+}

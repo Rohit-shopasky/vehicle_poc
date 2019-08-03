@@ -1,0 +1,9 @@
+/vehicle/client/node_modules
+/fabric-samples
+/vehicle/chaincode/vehicle_chaincode/node_modules
+/indy-sdk
+/libra
+/mediclare
+/test
+/test_graphql
+
