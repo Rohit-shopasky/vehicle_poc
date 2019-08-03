@@ -11,3 +11,5 @@ and one solo orderer ( Not good for production. I will use Raft ordering service
 All organization are the part of one channel
 
 To start the network use ./start_network.sh command.
+
+Chaincode is written in Node.js
